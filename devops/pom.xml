@@ -1,0 +1,28 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.com.devmedia.articles</groupId>
+	<artifactId>devops</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>DevOps</name>
+	<description>Projeto desenvolvido para explorar ferramentas e conceitos de DevOps</description>
+
+	<properties>
+		<spring.version>4.2.2.RELEASE</spring.version>
+	</properties>
+
+	<modules>
+		<module>model</module>
+		<module>standalone-cli</module>
+	</modules>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+	</dependencies>
+
+</project>
