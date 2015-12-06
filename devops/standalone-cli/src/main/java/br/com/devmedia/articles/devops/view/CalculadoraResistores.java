@@ -11,9 +11,11 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
-import br.com.devmedia.articles.devops.model.CalculadoraDeResistencia;
 import br.com.devmedia.articles.devops.model.MapaDeCores;
 import br.com.devmedia.articles.devops.model.Resistor;
+import br.com.devmedia.articles.devops.model.api.CalculadoraDeResistencia;
+import br.com.devmedia.articles.devops.model.exceptions.CorDeBaseInvalida;
+import br.com.devmedia.articles.devops.model.exceptions.CorDePrecisaoInvalida;
 import br.com.devmedia.articles.devops.model.exceptions.NumeroDeFaixasIncorreto;
 
 /**
@@ -136,8 +138,12 @@ public class CalculadoraResistores extends JFrame {
 							(String) opcoesFaixa3.getSelectedItem(),
 							(String) opcoesFaixa4.getSelectedItem());
 					JOptionPane.showMessageDialog(CalculadoraResistores.this, resistor.toString());
-				} catch (NumeroDeFaixasIncorreto e1) {
-					e1.printStackTrace();
+				} catch (NumeroDeFaixasIncorreto nfie) {
+					nfie.printStackTrace();
+				} catch (CorDePrecisaoInvalida cpie) {
+					cpie.printStackTrace();
+				} catch (CorDeBaseInvalida cbie) {
+					cbie.printStackTrace();
 				}
 			}
 		});

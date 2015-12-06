@@ -1,5 +1,9 @@
-package br.com.devmedia.articles.devops.model;
+package br.com.devmedia.articles.devops.model.api;
 
+import br.com.devmedia.articles.devops.model.MapaDeCores;
+import br.com.devmedia.articles.devops.model.Resistor;
+import br.com.devmedia.articles.devops.model.exceptions.CorDeBaseInvalida;
+import br.com.devmedia.articles.devops.model.exceptions.CorDePrecisaoInvalida;
 import br.com.devmedia.articles.devops.model.exceptions.NumeroDeFaixasIncorreto;
 
 public class FabricaDeResistores implements CalculadoraDeResistencia {
@@ -11,7 +15,8 @@ public class FabricaDeResistores implements CalculadoraDeResistencia {
 	 * @param valores Faixas coloridas no corpo do resistor
 	 * @return A resistência em si, composta por valor nominal e faixa de variação
 	 */
-	public Resistor montarResistor (String ... valores) throws NumeroDeFaixasIncorreto {
+	public Resistor montarResistor (String ... valores) 
+			throws NumeroDeFaixasIncorreto, CorDePrecisaoInvalida, CorDeBaseInvalida {
 		
 		if (valores == null || valores.length != 4) {
 			throw new NumeroDeFaixasIncorreto(
@@ -19,17 +24,17 @@ public class FabricaDeResistores implements CalculadoraDeResistencia {
 		}
 		
 		StringBuilder builder = new StringBuilder();
-		String token = String.valueOf(MapaDeCores.get(valores[0]));
+		String token = String.valueOf(MapaDeCores.lerValorBase(valores[0]));
 		
 		builder.append(token.substring(0, token.indexOf(".")));
 		
-		token = String.valueOf(MapaDeCores.get(valores[1]));
+		token = String.valueOf(MapaDeCores.lerValorBase(valores[1]));
 		builder.append(token.substring(0, token.indexOf(".")));
 		
 		Double base = Double.parseDouble(builder.toString());
-		Double powerOfTen = (Double) MapaDeCores.get(valores[2]);
+		Double powerOfTen = (Double) MapaDeCores.lerValorBase(valores[2]);
 		
-		Double precisao = (Double) MapaDeCores.get(valores[3]);
+		Double precisao = (Double) MapaDeCores.lerPrecisao(valores[3]);
 		
 		return new Resistor(new Double(base * Math.pow(10,  powerOfTen)), precisao);
 	}

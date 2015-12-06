@@ -10,6 +10,7 @@
 
 	<properties>
 		<spring.version>4.2.2.RELEASE</spring.version>
+		<junit.version>4.12</junit.version>
 	</properties>
 
 	<modules>
@@ -23,6 +24,13 @@
 			<artifactId>spring-context</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+		</dependency>
+
 	</dependencies>
 
 </project>
