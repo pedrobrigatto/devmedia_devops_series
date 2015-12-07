@@ -13,9 +13,9 @@ public interface CalculadoraDeResistencia {
 	 * @param faixas Faixas gravadas no corpo do resistor físico
 	 * @return Especificações nominais do resistor em questão
 	 * 
-	 * @throws CorDeBaseInvalida
-	 * @throws CorDePrecisaoInvalida
-	 * @throws NumeroDeFaixasIncorreto
+	 * @throws CorDeBaseInvalida quando a cor fornecida para o cálculo do valor de base for inválido
+	 * @throws CorDePrecisaoInvalida quando a cor fornecida para o cálculo da precisão for inválido
+	 * @throws NumeroDeFaixasIncorreto quando houver mais ou menos de quatro faixas fornecidas
 	 */
 	Resistor montarResistor (String ... faixas) 
 			throws NumeroDeFaixasIncorreto, CorDePrecisaoInvalida, CorDeBaseInvalida;

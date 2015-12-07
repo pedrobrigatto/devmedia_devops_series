@@ -1,8 +1,14 @@
 package br.com.devmedia.articles.devops.model;
 
+/**
+ * Representação lógica de um resistor (componente eletroeletrônico). 
+ * 
+ * @author pedrobrigatto
+ */
 public class Resistor {
 	
-	private static final String MENSAGEM = "Resistor [Valor: %.2f Ohms, Variação percentual: %.2f, Mín: %.2f, Max:%.2f]";
+	private static final String MENSAGEM = 
+			"Resistor [Valor: %.2f Ohms, Variação percentual: %.2f, Mín: %.2f, Max:%.2f]";
 	
 	private Double valorBase;
 	private Double variacao;
@@ -40,6 +46,7 @@ public class Resistor {
 
 	@Override
 	public String toString() {
-		return String.format(MENSAGEM, valorBase, variacao, this.lerMenorValor(), this.lerMaiorValor());
+		return String.format(MENSAGEM, valorBase, 
+				variacao, this.lerMenorValor(), this.lerMaiorValor());
 	}
 }

@@ -6,6 +6,12 @@ import java.util.Map;
 import br.com.devmedia.articles.devops.model.exceptions.CorDeBaseInvalida;
 import br.com.devmedia.articles.devops.model.exceptions.CorDePrecisaoInvalida;
 
+/**
+ * Representação de todos os valores associados às faixas de cores usadas para representar o valor
+ * final de um resistor (tanto o valor de base quanto a faixa de variação).
+ * 
+ * @author pedrobrigatto
+ */
 public final class MapaDeCores {
 
 	public static final String PRETO = "PRETO";
@@ -53,7 +59,8 @@ public final class MapaDeCores {
 		Number valor = codigosDeImprecisao.get(chave);
 
 		if (valor == null) {
-			throw new CorDePrecisaoInvalida("A cor fornecida não é válida para identificação da precisão de material.");
+			throw new CorDePrecisaoInvalida(
+					"A cor fornecida não é válida para identificação da precisão de material.");
 		}
 
 		return valor;
@@ -64,7 +71,8 @@ public final class MapaDeCores {
 		Number valor = codigosDeValor.get(chave);
 
 		if (valor == null) {
-			throw new CorDeBaseInvalida("A cor fornecida não é válida para composição da resistência.");
+			throw new CorDeBaseInvalida(
+					"A cor fornecida não é válida para composição da resistência.");
 		}
 
 		return valor;
