@@ -8,3 +8,4 @@ Este repositório de dados está conectado a um servidor de integração contín
 [14.12.15] Alterando permissão do arquivo post-receive para ser executável.
 [14.12.15] Alterando permissão do arquivo post-receive para ser executável.
 [14.12.15] Alterando permissão do arquivo post-receive para ser executável.
+[14.12.15] Alterando permissão do arquivo post-receive para ser executável.
