@@ -6,7 +6,4 @@ Este repositório de dados está conectado a um servidor de integração contín
 [14.12.15] Adicionados comentários em parte do código-fonte e corrigida a indentação para atender ao número máximo de 100 caracteres por coluna.
 [14.12.15] Submissão de alteração no arquivo de apresentação do projeto para validar comportamento dos hooks do Git
 [14.12.15] Alterando permissão do arquivo post-receive para ser executável.
-[14.12.15] Alterando permissão do arquivo post-receive para ser executável.
-[14.12.15] Alterando permissão do arquivo post-receive para ser executável.
-[14.12.15] Alterando permissão do arquivo post-receive para ser executável.
 [14.12.15] Testando submissão de código com hook configurado a partir do GitHub.
