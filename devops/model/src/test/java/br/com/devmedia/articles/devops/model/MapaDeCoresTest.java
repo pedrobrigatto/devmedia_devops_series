@@ -8,7 +8,7 @@ import br.com.devmedia.articles.devops.model.exceptions.CorDeBaseInvalida;
 import br.com.devmedia.articles.devops.model.exceptions.CorDePrecisaoInvalida;
 
 /**
- * Avalia o comportamento da classe responsável por gerenciar o mapa de cores utilizado para 
+ * Avalia o comportamento da classe responsável por gerenciar o mapa de cores utilizado para os
  * cálculos nominais de resistência elétrica.
  * 
  * @author pedrobrigatto
