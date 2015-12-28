@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+extraProperties=sonar.language\=java\r\nsonar.plugin.version\=2.7
+projectKey=br.com.devmedia.articles\:model
+serverUrl=http\://sonar-devopsdevmedia.rhcloud.com
+version=2
