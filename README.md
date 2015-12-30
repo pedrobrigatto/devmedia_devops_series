@@ -7,3 +7,5 @@ Este repositório de dados está conectado a um servidor de integração contín
 [14.12.15] Submissão de alteração no arquivo de apresentação do projeto para validar comportamento dos hooks do Git
 [14.12.15] Alterando permissão do arquivo post-receive para ser executável.
 [14.12.15] Testando hooks a partir do trigger "pre-push" para verificar comportamento do repositório local.
+
+[30.12.15] Testando build automático com integração com Sonar
