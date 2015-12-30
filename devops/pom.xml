@@ -13,7 +13,7 @@
 		<junit.version>4.12</junit.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<sonar.language>java</sonar.language>
-		<sonar.plugin.version>1.0-beta-2</sonar.plugin.version>
+		<sonar.plugin.version>2.1</sonar.plugin.version>
 		<sonar.maven3.plugin.version>2.0</sonar.maven3.plugin.version>
 	</properties>
 
