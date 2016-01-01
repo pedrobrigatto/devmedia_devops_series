@@ -80,11 +80,11 @@
 	</build>
 
 	<distributionManagement>
-		<snapshotRepository>
+		<repository>
 			<id>nexus</id>
 			<name>Nexus Repository</name>
 			<url>http://devmedianexus-pedrobrigatto.rhcloud.com/nexus/content/repositories/snapshots/</url>
-		</snapshotRepository>
+		</repository>
 	</distributionManagement>
 
 </project>
