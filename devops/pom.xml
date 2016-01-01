@@ -81,9 +81,9 @@
 
 	<distributionManagement>
 		<repository>
-			<id>nexus</id>
-			<name>Nexus Repository</name>
-			<url>http://devmedianexus-pedrobrigatto.rhcloud.com/nexus/content/repositories/snapshots/</url>
+			<id>releases</id>
+			<name>Releases</name>
+			<url>http://devmedianexus-pedrobrigatto.rhcloud.com/nexus/content/repositories/releases/</url>
 		</repository>
 	</distributionManagement>
 
