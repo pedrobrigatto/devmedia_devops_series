@@ -45,18 +45,46 @@
 					<artifactId>sonar-maven-plugin</artifactId>
 					<version>${sonar.plugin.version}</version>
 				</plugin>
-				
-				<!-- 
+
 				<plugin>
-					<groupId>org.codehaus.sonar</groupId>
-					<artifactId>sonar-maven3-plugin</artifactId>
-					<version>${sonar.maven3.plugin.version}</version>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<configuration>
+						<skip>true</skip>
+					</configuration>
 				</plugin>
-				-->
+				<plugin>
+					<groupId>org.sonatype.plugins</groupId>
+					<artifactId>nexus-staging-maven-plugin</artifactId>
+					<executions>
+						<execution>
+							<id>default-deploy</id>
+							<phase>deploy</phase>
+							<goals>
+								<goal>deploy</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<serverId>nexus</serverId>
+						<nexusUrl>http://devmedianexus-pedrobrigatto.rhcloud.com/nexus/</nexusUrl>
+						<!-- explicit matching using the staging profile id -->
+						<!-- <stagingProfileId>129341e09f2ee275</stagingProfileId> -->
+					</configuration>
+				</plugin>
+
+				<!-- <plugin> <groupId>org.codehaus.sonar</groupId> <artifactId>sonar-maven3-plugin</artifactId> 
+					<version>${sonar.maven3.plugin.version}</version> </plugin> -->
 			</plugins>
 		</pluginManagement>
 	</build>
 
-	
+	<distributionManagement>
+		<snapshotRepository>
+			<id>nexus</id>
+			<name>Nexus Repository</name>
+			<url>http://devmedianexus-pedrobrigatto.rhcloud.com/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 </project>
