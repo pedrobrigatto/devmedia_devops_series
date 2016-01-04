@@ -10,3 +10,4 @@ Este repositório de dados está conectado a um servidor de integração contín
 
 [30.12.15] Testando build automático com integração com Sonar via Jenkins
 [2016.01.04] Testando web hook criado no GitHub
+[2016.01.04] Testando web hook criado no GitHub
